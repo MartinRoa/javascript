@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>JavaScript</title>
 </head>
-<body>
+<body id="bodyStyle">
+    <header class="headerStyle">
+        <div class="header__logo">
+            <a href="index.html">
+                <img class="logo__image animate__animated animate__rubberBand" src="img/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li class="menu__link"><a href="index.html">Inicio</a></li>
+                <li class="menu__link"><a href="">Merchandising</a></li>
+                <li class="menu__link"><a href="">Quienes somos</a></li>
+                <li class="menu__link"><a href="">Ubicacion</a></li>
+                <li class="menu__link"><a href="">Ingresa o registrate</a></li>
+                <li class="ver-carrito" id="verCarrito">🛒</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- shop content -->
+        <div id="shopContent" class="shop-content"></div>
+    </main>
+        <!-- modal container -->
+        <div id="modal-container" class="modal-container"></div>
+    <footer>
+        <section class="footerStyle">
+            <article>
+                    <div>
+                        <ul class="footerNav subsubtitleFormat">
+                            <li>Ayuda</li>
+                            <li>Impronta Roja</li>
+                            <li>Seguinos En</li>
+                        </ul>
+                    </div>
+            </article>
+            <article>
+                <div class="footerImages">
+                    <div>
+                        <img src="img/fbb.png" alt="facebook">
+                    </div>
+                    <div>
+                        <img src="img/ig.png" alt="instagram">
+                    </div>
+                </div>
+        </article>
+    </section>
+</footer>
+
+<script src="./assets/products.js"></script>
 <script src="./assets/proyecto.js"></script>
 </body>
 </html>
