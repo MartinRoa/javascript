@@ -1,0 +1,466 @@
+/* Variables root */
+:root{
+    /* Colors */
+    --primary: #db6476;
+    --secondary: #000000;
+    --text-color: rgb(211, 211, 211);
+    --special-one: #b6d81d;
+    --special-two: rgb(158, 20, 20);
+    --special-three: rgb(43, 37, 37);
+    --border-white: 0.3px rgb(201, 201, 201);
+
+    /* Spacings */
+    --spacing-large: 5rem;
+    --spacing-medium: 2rem;
+    --spacing-small: 1.5rem;
+    --spacing-xsmall: 1rem;
+
+    /* Font-family */
+    --font-principal: 'Poppins', sans-serif;
+    --font-title: 'Roboto', sans-serif;
+
+    /* Font-Sizes */
+    --text-xlargue: 3.5rem;
+    --text-medium: 2.5rem;
+    --text-small: 2rem;
+    --text-xsmall: 1.5rem;
+    --text-base: 1rem;
+
+}
+
+/* Normalize */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* html{
+    font-size: 62.5%;
+}
+ */
+a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+/* Fuente */
+
+body{
+    padding-left: var(--spacing-large);
+    padding-right: var(--spacing-large);
+    overflow-x: hidden;
+    font-family: var(--font-principal);
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* Background Image */
+
+#bodyStyle{
+    background-image: url(img/fondo2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: var(--text-color);
+    font-weight: 800;
+    -webkit-text-stroke: 0.4px rgb(27, 27, 27);
+}
+
+/* Header */
+
+.headerStyle{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(antiquewhite, rgb(230, 182, 121), rgb(230, 153, 53));
+    padding-bottom: var(--spacing-small);
+}
+
+/* Logo */
+
+.header__logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-small);
+}
+
+.logo__image{
+    width: 20rem;
+}
+
+/* Navegacion */
+
+.nav__prop{
+    display: flex;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-size: var(--text-xsmall);
+}
+
+/* Titulos estilos */
+
+.title{
+    text-align: center;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+}
+
+.boxTitle{
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+}
+
+.titleFormat{
+    font-size: var(--text-xlargue);
+    color: var(--primary);
+    padding-bottom: var(--spacing-xsmall);
+    text-align: center;
+}
+
+.textDecoration{
+    font-size: var(--text-xsmall);
+    align-items: center;
+}
+
+.subtitleFormat{
+    font-family: var(--font-title);
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: var(--text-medium);
+    text-align: center;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+}
+
+.subsubtitleFormat{
+    font-size: var(--text-small);
+    margin-top: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-xsmall);
+}
+
+.textCenter{
+    text-align: center;
+    font-size: var(--text-xsmall);
+    padding-bottom: var(--spacing-xsmall);
+}
+
+/* tarjetas, color titulo cervezas*/
+
+.img__app{
+    padding-left: var(--spacing-medium);
+    animation-name: rotateMe;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-iteration-count: initial;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+
+.infoCard{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: var(--spacing-medium);
+}
+
+.infoCard-card1{
+    width: 50%;
+    text-align: center;
+}
+
+.cover__img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.textDecoration__info{
+    font-size: var(--text-xsmall);
+}
+
+.cervezaRubia{
+    color: var(--special-one);
+    text-align: center;
+}
+
+.cervezaRoja{
+    color: var(--special-two);
+    text-align: center;
+    
+}
+
+.cervezaNegra{
+    color: var(--special-three);
+    -webkit-text-stroke: var(--border-white);
+    text-align: center;
+}
+
+.tarjet__container{
+    display: flex;
+    justify-content: center;
+}
+
+.container__tarjet{
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xsmall);
+    align-items: center;
+}
+
+/* .tarjet__picture{
+
+} */
+
+.image__tarjet{
+    width: 24rem;
+    height: 29rem;
+    transition: transform .7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+/* Footer */
+
+.footerStyle{
+    background-image: linear-gradient(rgb(230, 153, 53), rgb(230, 182, 121), antiquewhite);
+    color: var(--secondary);
+}
+
+.footerNav{
+    margin-top: var(--spacing-medium);
+    display: flex;
+    justify-content: space-around;
+}
+.footerImages{
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Merchandising */
+
+.merchImages{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*  alineador */
+
+.alingItems{
+    color: #801929;
+    text-align: center;
+    margin: var(--spacing-xsmall);
+}
+
+.titleFormat3{
+    font-size: var(--text-small);
+    color: #d6d6d6;
+    background-color: rgba(0, 0, 0, 0.473);
+    text-align: center;
+
+}
+.titleFormat2{
+    color: var(--primary);
+    background-color: rgba(0, 0, 0, 0.473);
+    text-align: center;
+}
+
+/* Animaciones-Transformaciones */
+
+@keyframes rotateMe {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.menu__link:hover{
+    background-color:rgba(252, 71, 0, 0.747);
+    transition: background-color 1s;
+}
+
+.image__tarjet:hover{
+    transform: scale(1.04);
+}
+
+/* Responsive */
+
+@media screen and (max-width:1200px) {
+    .infoCard{
+        flex-direction: column;
+    }
+    .infoCard-card1{
+        padding-bottom: var(--spacing-small);
+    }
+    .tarjet__container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1115px) {
+    .menu{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .infoCard-card1{
+        width:  100%;
+    }
+    .textDecoration__info{
+        font-size: var(--text-base);
+    }
+    .cover__img{
+        width: 100%;
+    }
+    .footerNav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .textCenter{
+        font-size: var(--text-base);
+    }
+    .image__tarjet{
+        width: 15rem;
+        height: 15rem;
+    }
+    .footerImages{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilos JS */
+
+/* product cards */
+.shop-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin-top: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.card > img {
+    width: 90%;
+    height: 250px;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    color: #e91737;
+}
+
+/* modal content */
+
+.modal-container{
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* for the top */
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a0909;
+    color: #fff;
+    width: 100%;
+}
+
+.modal-header-title {
+    justify-self: start;
+}
+
+.modal-header-button {
+    cursor: pointer;
+}
+
+.modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 1%;
+}
+
+.modal-container > div > img {
+    height: 120px;
+    width: 120px;
+}
+
+.total-content{
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
