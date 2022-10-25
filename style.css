@@ -464,3 +464,21 @@ ul{
     text-align: center;
     padding-top: 20px;
 }
+
+/* boton eliminar producto */
+.delete-product {
+    cursor: pointer;
+}
+
+/* contador carrito */
+.cantidad-carrito {
+    background-color: #e91737;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 147px;
+    right: 96px;
+    position: absolute;
+    display: none;
+}
