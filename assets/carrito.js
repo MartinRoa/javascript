@@ -1,4 +1,3 @@
-/* verCarrito.addEventListener("click", () => { */
 const pintarCarrito = () => {
     modalContainer.innerHTML = "";
     modalContainer.style.display = "flex";
@@ -26,11 +25,31 @@ const pintarCarrito = () => {
             <img src="${product.img}">
             <h3>${product.nombre}</h3>
             <p>${product.precio} $</p>
+            <span class="restar"> - </span>
             <p>${product.cantidad}</p>
+            <span class="sumar"> + </span>
             <p>Total:${product.cantidad * product.precio}</p>
         `;
 
         modalContainer.append(carritoContent);
+
+        let restar = carritoContent.querySelector(".restar")
+
+        restar.addEventListener("click", () =>{
+            if(product.cantidad !== 1){
+            product.cantidad--;
+            }
+            saveLocal();
+            pintarCarrito();
+        });
+
+        let sumar = carritoContent.querySelector(".sumar")
+
+        sumar.addEventListener("click", () =>{
+            product.cantidad++;
+            pintarCarrito();
+            saveLocal();
+        });
 
         let eliminar = document.createElement("span");
 
@@ -58,11 +77,19 @@ const eliminarProducto = () => {
         return carritoId !== foundId;
     });
     carritoCounter();
+    saveLocal();
     pintarCarrito();
 };
 
 
 const carritoCounter = () => {
     cantidadCarrito.style.display = "block";
-    cantidadCarrito.innerText = carrito.length;
-}
+
+    const carritoLenght = carrito.length;
+
+    localStorage.setItem("carritoLenght", JSON.stringify(carritoLenght))
+
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLenght"));
+};
+
+carritoCounter();
