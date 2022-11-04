@@ -29,6 +29,7 @@ const pintarCarrito = () => {
             <p>${product.cantidad}</p>
             <span class="sumar"> + </span>
             <p>Total:${product.cantidad * product.precio}</p>
+            <span class="delete-product"> ❌ </span>
         `;
 
         modalContainer.append(carritoContent);
@@ -51,13 +52,12 @@ const pintarCarrito = () => {
             saveLocal();
         });
 
-        let eliminar = document.createElement("span");
+        let eliminar = carritoContent.querySelector(".delete-product");
 
-        eliminar.innerText = "❌";
-        eliminar.className = "delete-product";
-        carritoContent.append(eliminar);
+        eliminar.addEventListener("click", ()=> {
+            eliminarProducto(product.id);
+        })
 
-        eliminar.addEventListener("click", eliminarProducto)
     });
 
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
@@ -70,8 +70,8 @@ const pintarCarrito = () => {
 
 verCarrito.addEventListener("click", pintarCarrito);
 
-const eliminarProducto = () => {
-    const foundId = carrito.find((element) => element.id);
+const eliminarProducto = (id) => {
+    const foundId = carrito.find((element) => element.id === id);
 
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
