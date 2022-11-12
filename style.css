@@ -494,3 +494,33 @@ ul{
 .ver-carrito {
     cursor: pointer;
 }
+
+.scroll {
+    width : 75rem;
+    height : 10rem;
+    overflow: scroll;
+    text-align: center;
+}
+
+.btnF {
+    width: 10rem;
+    height: 10rem;
+    display: grid;
+    place-items: center;
+}
+
+.btnA{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    color: snow;
+    background-color: #801929;
+    border-radius: 6;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.btnA:hover {
+    background-color: brown;
+}
